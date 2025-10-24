@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+```
+
+**Step 3: Commit the file**
+- Click **Commit changes**
+
+**Step 4: Check the deployment**
+- Go to **Actions** tab in your repository
+- You should see a workflow running
+- Wait for it to complete (green checkmark)
+
+**Step 5: Test your site**
+```
+https://amnayelamri.github.io/talqin/

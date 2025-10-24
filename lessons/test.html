@@ -222,6 +222,166 @@
             font-weight: 700;
             color: #2a5298;
         }
+
+        /* ========== MOBILE RESPONSIVE CSS ========== */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                border-radius: 15px;
+            }
+
+            .header {
+                padding: 25px 15px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+                margin-bottom: 8px;
+            }
+
+            .header p {
+                font-size: 16px;
+            }
+
+            .content {
+                padding: 25px 15px;
+            }
+
+            .video-container {
+                margin-bottom: 20px;
+            }
+
+            .time-display {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .timeline {
+                height: 60px;
+                margin-bottom: 20px;
+                border-radius: 8px;
+            }
+
+            .pause-message {
+                padding: 40px 20px;
+                max-width: 90%;
+                border-radius: 15px;
+            }
+
+            .pause-message h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .pause-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+
+            .alert {
+                padding: 15px;
+                margin-bottom: 20px;
+                font-size: 14px;
+            }
+
+            .markers-info {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .markers-info h3 {
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+
+            .markers-count {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+
+            .container {
+                border-radius: 12px;
+            }
+
+            .header {
+                padding: 20px 12px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+                margin-bottom: 6px;
+            }
+
+            .header p {
+                font-size: 14px;
+            }
+
+            .content {
+                padding: 15px 12px;
+            }
+
+            .time-display {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .timeline {
+                height: 50px;
+                margin-bottom: 15px;
+            }
+
+            .pause-message {
+                padding: 30px 15px;
+                max-width: 95%;
+            }
+
+            .pause-message h2 {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .pause-buttons {
+                gap: 10px;
+            }
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .alert {
+                padding: 12px;
+                margin-bottom: 15px;
+                font-size: 13px;
+            }
+
+            .markers-info {
+                padding: 15px;
+                margin-top: 15px;
+            }
+
+            .markers-info h3 {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            .markers-count {
+                font-size: 32px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -277,18 +437,14 @@
             description: "السورة الأولى في القرآن الكريم",
             
             // 3️⃣ رابط فيديو اليوتيوب
-            youtubeUrl: "https://www.youtube.com/watch?v=d1aOnueCYnY",
+            youtubeUrl: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
             
             // 4️⃣ علامات التوقف (انسخها من ملف JSON المصدر)
-            markers:[
-                {
-                  "time": 11.554896001907348,
-                  "triggered": false
-                },
-                {
-                    "time": 19.712550057220458,
-                    "triggered": false
-                }
+            markers: [
+                { time: 10, triggered: false },
+                { time: 20, triggered: false },
+                { time: 30, triggered: false },
+                { time: 40, triggered: false }
             ]
         };
         

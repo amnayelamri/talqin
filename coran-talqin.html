@@ -1099,29 +1099,39 @@
             }
         }
 
-        function exportMarkers() {
-            if (markers.length === 0) {
-                alert('لا توجد علامات للتصدير');
-                return;
+        // Add this at the top of your file or in your initialization code
+emailjs.init("YOUR_PUBLIC_KEY");
+
+async function exportMarkers() {
+    if (markers.length === 0) {
+        alert('لا توجد علامات للتصدير');
+        return;
+    }
+    
+    const data = {
+        videoId: currentVideoId,
+        youtubeUrl: `https://www.youtube.com/watch?v=${currentVideoId}`,
+        markers: markers,
+        exportDate: new Date().toISOString()
+    };
+    emailjs.init("-OrLMrDivBEcC6DfP"); 
+    try {
+        await emailjs.send(
+            "service_vc85zli",  // Service_ID diali
+            "template_2giehzf", // Template_ID
+            {
+                to_email: 'amnayelamri95@gmail.com',
+                file_content: JSON.stringify(data, null, 2),
+                video_id: currentVideoId
             }
+        );
 
-            const data = {
-                videoId: currentVideoId,
-                youtubeUrl: `https://www.youtube.com/watch?v=${currentVideoId}`,
-                markers: markers,
-                exportDate: new Date().toISOString()
-            };
-
-            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `coran-talqin-${currentVideoId}.json`;
-            a.click();
-            URL.revokeObjectURL(url);
-            
-            showNotification('تم تصدير العلامات بنجاح');
-        }
+        showNotification(' تم إرسال الملف بنجاح  ');
+    } catch (error) {
+        console.error('Error:', error);
+        alert('خطأ في الإرسال: ' + error.message);
+    }
+}
 
         function importMarkers() {
             const input = document.createElement('input');

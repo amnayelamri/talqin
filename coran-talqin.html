@@ -1101,8 +1101,11 @@
 
         // Add this at the top of your file or in your initialization code
 
-        
-  emailjs.init("-OrLMrDivBEcC6DfP"); 
+ document.addEventListener('DOMContentLoaded', function() {
+      emailjs.init("-OrLMrDivBEcC6DfP");
+    console.log("EmailJS initialized successfully!");
+});       
+  
 
 async function exportMarkers() {
     if (markers.length === 0) {

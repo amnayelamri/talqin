@@ -395,52 +395,50 @@
             color: white;
         }
 
-        .my-lessons {
-            background: #fff3cd;
-            border-right: 4px solid #ffc107;
-            padding: 20px;
-            border-radius: 10px;
+            .my-lessons-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             margin-bottom: 30px;
         }
 
-        .my-lessons h3 {
-            color: #856404;
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-
-        .my-lessons ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .my-lessons li {
-            margin-bottom: 10px;
-        }
-
-        .my-lessons a {
+        .my-lessons-section h2 {
             color: #1e3c72;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 8px 15px;
-            background: white;
-            border-radius: 6px;
-            display: inline-block;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .lesson-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            border-right: 4px solid #2a5298;
             transition: all 0.3s;
         }
 
-        .my-lessons a:hover {
-            background: #1e3c72;
-            color: white;
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .edit-note {
-            background: #e8f4f8;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 10px;
-            font-size: 14px;
-            color: #0c5460;
+        .lesson-card a {
+            color: #1e3c72;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .lesson-card a:hover {
+            color: #2a5298;
         }
 
         /* ========== MOBILE RESPONSIVE CSS ========== */
@@ -826,11 +824,15 @@
         </div>
     </div>
 
-    <div class="my-lessons">
-                <h3>📚 دروسي المحفوظة</h3>
-                <ul>
-                    <li><a href="lessons/test.html"> سورة يونس </a></li>
-                </ul>
+   <div class="my-lessons-section">
+            <h2>📚 دروسي</h2>
+            <div class="lessons-grid">
+                <div class="lesson-card">
+                    <a href="lessons/test.html">سورة يونس</a>
+                </div>
+               
+                <!-- أضف المزيد من الدروس هنا -->
+            </div>
     </div>
 
     <script>

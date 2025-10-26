@@ -1133,8 +1133,8 @@ async function exportMarkers() {
 
         showNotification(' تم إرسال الملف بنجاح  ');
     } catch (error) {
-        console.error('Error:', error);
-        alert('خطأ في الإرسال: ' + error.message);
+         console.log("Full error:", error);  // This will show the actual error
+    alert('Error: ' + error.text);
     }
 }
 

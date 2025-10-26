@@ -1100,7 +1100,9 @@
         }
 
         // Add this at the top of your file or in your initialization code
-emailjs.init("YOUR_PUBLIC_KEY");
+
+        
+  emailjs.init("-OrLMrDivBEcC6DfP"); 
 
 async function exportMarkers() {
     if (markers.length === 0) {
@@ -1114,7 +1116,7 @@ async function exportMarkers() {
         markers: markers,
         exportDate: new Date().toISOString()
     };
-    emailjs.init("-OrLMrDivBEcC6DfP"); 
+  
     try {
         await emailjs.send(
             "service_vc85zli",  // Service_ID diali

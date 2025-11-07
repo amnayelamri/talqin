@@ -34,6 +34,32 @@
             overflow: hidden;
         }
 
+        .nav-bar {
+            background: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background: #f8f9fa;
+            border: 2px solid #1e3c72;
+            border-radius: 8px;
+            color: #1e3c72;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .nav-btn:hover {
+            background: #1e3c72;
+            color: white;
+        }
+
         .header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
@@ -386,6 +412,8 @@
 </head>
 <body>
     <div class="container">
+        <div class="nav-bar">
+            <a href="index.html" class="nav-btn">🏠 العودة للرئيسية</a>
         <div class="header">
             <h1 id="lesson-title">درس تلقين القرآن</h1>
             <p id="lesson-description">الوصف</p>
